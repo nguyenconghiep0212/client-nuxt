@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     "nuxt-socket-io",
     "dayjs-nuxt"
   ],
+  devServer: {
+    port: 3301
+  },
+  runtimeConfig: {
+    PNPM_FLAGS: '--shamefully-hoist'
+  },
   io,
   pinia: {
     autoImports: ["defineStore"],
